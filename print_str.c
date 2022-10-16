@@ -13,7 +13,7 @@ unsigned int print_str(char *str)
 
 	if (str == NULL)
 	{
-		write(1,"(null)",6);
+		write(1, "(null)", 6);
 		return (6);
 	}
 	for (i = 0; str[i] != '\0'; i++)
