@@ -38,9 +38,11 @@ int _printf(const char *format, ...)
 					i++;
 					continue;
 				case '%':
-					i++;
 					count += _putchar(format[i]);
+					i++;
 					continue;
+				case '\0':
+					return (-1);
 			}
 		}
 		c = format[i];
