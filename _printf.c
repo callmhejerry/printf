@@ -15,9 +15,10 @@ int _printf(const char *format, ...)
 	unsigned int i;
 	char c;
 	char *str;
-	int i_num;
-	unsigned int ui_num;
-
+	int count;
+	/*int i_num;*/
+	/*unsigned int ui_num;*/
+	count = 0;
 	va_start(ap, format);
 	for (i = 0; format != NULL && format[i] != '\0'; i++)
 	{
@@ -27,23 +28,23 @@ int _printf(const char *format, ...)
 			{
 				case 'c':
 					c = va_arg(ap, int);
-					_putchar(c);
+					count += _putchar(c);
 					i++;
 					continue;
 				case 's':
 					str = va_arg(ap, char *);
 					if (str != NULL)
-						print_str(str);
+						count += print_str(str);
 					i++;
 					continue;
 				case '%':
 					i++;
-					_putchar(format[i]);
+					count += _putchar(format[i]);
 					continue;
 			}
 		}
 		c = format[i];
-		_putchar(c);
+		count += _putchar(c);
 	}
 	va_end(ap);
 	return (0);
