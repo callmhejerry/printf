@@ -47,5 +47,5 @@ int _printf(const char *format, ...)
 		count += _putchar(c);
 	}
 	va_end(ap);
-	return (0);
+	return (count);
 }
