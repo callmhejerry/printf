@@ -33,8 +33,7 @@ int _printf(const char *format, ...)
 					continue;
 				case 's':
 					str = va_arg(ap, char *);
-					if (str != NULL)
-						count += print_str(str);
+					count += print_str(str);
 					i++;
 					continue;
 				case '%':
