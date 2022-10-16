@@ -15,8 +15,8 @@ int _printf(const char *format, ...)
 	unsigned int i;
 	char c;
 	char *str;
-	int i_num;
-	unsigned int ui_num;
+	/*int i_num;*/
+	/*unsigned int ui_num;*/
 
 	va_start(ap, format);
 	for (i = 0; format != NULL && format[i] != '\0'; i++)
