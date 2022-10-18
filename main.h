@@ -41,4 +41,5 @@ int func_o(va_list *ap, int *count);
 int func_x(va_list *ap, int *count);
 int func_X(va_list *ap, int *count);
 int func_S(va_list *ap, int *count);
+long check(unsigned int n);
 #endif

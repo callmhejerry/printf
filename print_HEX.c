@@ -10,11 +10,13 @@
   */
 long print_HEX(unsigned int n)
 {
-	unsigned int num, h;
+	unsigned int num;
 	long i, j;
 	char *arr_int;
 
 	num = n;
+	if (check(n))
+		return (1);
 	for (i = 0; num != 0; num /= 16, i++)
 		;
 	arr_int = (char *)malloc(i);
@@ -22,8 +24,7 @@ long print_HEX(unsigned int n)
 		return (0);
 	for (j = 0; j < i; j++, n /= 16)
 	{
-		h = n % 16;
-		switch (h)
+		switch ((n % 16))
 		{
 			case 10:
 				arr_int[j] = 'A';
