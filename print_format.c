@@ -15,6 +15,7 @@ int print_format(char c, va_list *ap, int *count)
 	int result;
 	format format_arr[10] = {
 		{'c', func_c},
+		{'r', func_r},
 		{'s', func_s},
 		{'d', func_i},
 		{'i', func_i},
