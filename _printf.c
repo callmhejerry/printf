@@ -14,7 +14,6 @@ int _printf(const char *format, ...)
 	va_list ap;
 	unsigned int i;
 	char c;
-	char *str;
 	int count;
 
 	count = 0;
