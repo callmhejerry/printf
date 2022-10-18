@@ -1,5 +1,6 @@
 #include <stdarg.h>
 #include "main.h"
+#include <stdio.h>
 
 /**
   * func_R - The function to be called when a 'R'
@@ -11,8 +12,12 @@
 int func_R(va_list *ap, int *count)
 {
 	char *str;
+	char n[] = "null";
 
 	str = va_arg(*ap, char *);
-	*count += rot13(str);
+	if (str = NULL)
+		*count += rot13(n);
+	else
+		*count += rot13(str);
 	return (1);
 }
