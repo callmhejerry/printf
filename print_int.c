@@ -9,14 +9,15 @@ unsigned int print_int(int n)
 	unsigned int tens, num, count;
 
 	tens = 1;
+	count = 0;
 	if (n < 0)
 	{
 		_putchar('-');
 		n *= -1;
+		count++;
 	}
 	while (n / tens > 9)
 		tens *= 10;
-	count = 0;
 	while (tens >= 1)
 	{
 		num = (n / tens) % 10;
