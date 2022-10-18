@@ -10,8 +10,7 @@
   */
 long print_HEX(unsigned int n)
 {
-	unsigned int num;
-	long i, j;
+	long i, j, num;
 	char *arr_int;
 
 	num = n;
@@ -45,9 +44,10 @@ long print_HEX(unsigned int n)
 				arr_int[j] = 'F';
 				continue;
 		}
-		for (j = i - 1; j >= 0; j--)
-			_putchar(arr_int[j]);
-		free(arr_int);
+		arr_int[j] = ((n % 16) + '0');
 	}
+	for (j = i - 1; j >= 0; j--)
+		_putchar(arr_int[j]);
+	free(arr_int);
 	return (i);
 }
