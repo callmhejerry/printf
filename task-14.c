@@ -12,8 +12,12 @@
 int func_R(va_list *ap, int *count)
 {
 	char *str;
+	char n[] = "null";
 
 	str = va_arg(*ap, char *);
-	*count += rot13(n);
+	if (str == NULL)
+		*count += rot13(n);
+	else
+		*count += rot13(str);
 	return (1);
 }
