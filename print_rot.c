@@ -14,6 +14,8 @@ unsigned int rot13(char *str)
 	char a[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	char b[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
+	if (str == NULL)
+		return (0);
 	i = 0;
 	for (c = 0; str[c] != '\0'; c++)
 		;
