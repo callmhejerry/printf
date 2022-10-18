@@ -42,6 +42,9 @@ int func_x(va_list *ap, int *count);
 int func_X(va_list *ap, int *count);
 int func_S(va_list *ap, int *count);
 int func_r(va_list *ap, int *count);
+int func_R(va_list *ap, int *count);
+unsigned int rot13(char *str);
+char *_memcpy(char *dest, char *src, unsigned int n);
 long check(unsigned int n);
 int print_rev(char *s);
 #endif
