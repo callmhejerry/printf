@@ -27,22 +27,20 @@ int _printf(const char *format, ...)
 		{
 			switch (format[i + 1])
 			{
-				case 'c':
-					c = va_arg(ap, int);
-					count += _putchar(c);
-					i++;
-					continue;
-				case 's':
-					str = va_arg(ap, char *);
-					count += print_str(str);
-					i++;
-					continue;
 				case '%':
 					count += _putchar(format[i]);
 					i++;
 					continue;
 				case '\0':
 					return (-1);
+				default:
+					if (print_format(format[i + 1]
+								, &ap, &count)
+					   )
+					{
+						i++;
+						continue;
+					}
 			}
 		}
 		c = format[i];
