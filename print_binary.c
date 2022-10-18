@@ -16,6 +16,11 @@ long print_binary(unsigned int n)
 
 	num = n;
 	i = 0;
+	if (n == 0)
+	{
+		_putchar('0');
+		return (1);
+	}
 	while (num)
 	{
 		num = num / 2;
